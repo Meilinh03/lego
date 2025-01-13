@@ -28,7 +28,9 @@ console.log(MY_FAVORITE_DEALERS[0]);
 // 🎯 TODO 1: The highest reduction
 // 0. I have 2 favorite lego sets shopping communities stored in MY_FAVORITE_DEALERS variable
 // 1. Create a new variable and assign it the link of the lego set with the highest reduction I can find on these 2 websites
-// 2. Log the variable
+const lien = 'https://www.avenuedelabrique.com/objets-divers/630-separateur-de-briques/p3501';
+// 2. Log the variable 
+console.log(lien);
 
 /**
  * 🧱
@@ -38,10 +40,16 @@ console.log(MY_FAVORITE_DEALERS[0]);
  * The variable is loaded by the file `data.js`
  * 🧱
  */
+ 
 
 // 🎯 TODO 2: Number of deals
 // 1. Create a variable and assign it the number of deals
+const n = deals.length ; 
 // 2. Log the variable
+console.log(n);
+
+
+
 
 // 🎯 TODO 3: Website name
 // 1. Create a variable and assign it the list of shopping community name only
