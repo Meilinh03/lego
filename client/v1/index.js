@@ -49,12 +49,13 @@ const n = deals.length ;
 console.log(n);
 
 
-
-
 // 🎯 TODO 3: Website name
 // 1. Create a variable and assign it the list of shopping community name only
+const list_shopping_community = [ new Set(deals.map(deal => deal.community))];
 // 2. Log the variable
-// 3. Log how many shopping communities we have
+console.log(list_shopping_community);
+// 3. Log how many shopping communities we have 
+console.log(list_shopping_community.length + 1); //La taille est 1 donc il faut ajouter 1 
 
 // 🎯 TODO 4: Sort by price
 // 1. Create a function to sort the deals by price
