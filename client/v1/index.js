@@ -59,21 +59,47 @@ console.log(list_shopping_community.length + 1); //La taille est 1 donc il faut 
 
 // 🎯 TODO 4: Sort by price
 // 1. Create a function to sort the deals by price
+def sorted_price():
+    List_Price = deals() 
+    return sorted(List_Price) 
+    
 // 2. Create a variable and assign it the list of sets by price from lowest to highest
+List_Sorted_Price = [deals(price)]
+
 // 3. Log the variable
+console.log(List_Sorted_Price);
 
 // 🎯 TODO 5: Sort by date
 // 1. Create a function to sort the deals by date
+def sorted_date():
+     List_Date = deals() 
+     return sorted(List_Date) Date[0]
 // 2. Create a variable and assign it the list of deals by date from recent to old
+List_Sorted_Date = [deals(date)]
+
 // 3. Log the variable
+console.log(List_Sorted_Date);
 
 // 🎯 TODO 6: Filter a specific percentage discount range
 // 1. Filter the list of deals between 50% and 75%
+const filteredDeals = deals.filter(deal => deal.discount >= 50 && deal.discount <= 75);
 // 2. Log the list
+console.log(filteredDeals);
 
 // 🎯 TODO 7: Average percentage discount
 // 1. Determine the average percentage discount of the deals
-// 2. Log the average
+if (deals.length > 0) {
+    // 2. Calculer la somme totale des réductions
+    const totalDiscount = deals.reduce((sum, deal) => sum + deal.discount, 0);
+    
+    // 3. Calculer la moyenne en divisant par le nombre total de deals
+    const averageDiscount = totalDiscount / deals.length;
+    
+    // // 4. Log the average - Afficher la réduction moyenne
+    console.log(`Average discount: ${averageDiscount.toFixed(2)}%`);
+} else {
+    console.log("No deals available.");
+}
 
 /**
  * 🏎
@@ -100,7 +126,24 @@ console.log(list_shopping_community.length + 1); //La taille est 1 donc il faut 
 
 // 🎯 TODO 9: Sort by price for each community
 // 1. For each community, sort the deals by discount price, from highest to lowest
-// 2. Log the sort
+const groupedByCommunity = deals.reduce((acc, deal) => {
+    // Si la communauté n'existe pas dans l'accumulateur, l'ajouter comme tableau vide
+    if (!acc[deal.community]) {
+        acc[deal.community] = [];
+    }
+    // Ajouter le deal à la communauté correspondante
+    acc[deal.community].push(deal);
+    return acc;
+}, {});
+
+// 2. Trier les deals de chaque communauté par réduction, du plus élevé au plus bas
+for (const community in groupedByCommunity) {
+    groupedByCommunity[community].sort((a, b) => b.discount - a.discount); // Tri décroissant
+}
+
+//  2. Log the sort
+console.log(groupedByCommunity);
+
 
 // 🎯 TODO 10: Sort by date for each community
 // 1. For each set, sort the deals by date, from old to recent
@@ -397,6 +440,31 @@ const VINTED = [
 // 2. Compute the p5 price value of the listing
 // 3. Compute the p25 price value of the listing
 // The p25 value (25th percentile) is the lower value expected to be exceeded in 25% of the vinted items
+
+console.log('TODO11 \n'); 
+const LIST_PRICES = [...new Set(VINTED.map(VINTED => VINTED.price))];
+console.log(LIST_PRICES);
+
+function ComputeAverage( LIST_PRICES ) {
+    const sum = (LIST_PRICES.reduce((total,price) => total + price , 0))
+    return sum / LIST_PRICES.length ;
+}
+
+
+function computerPercentile(LIST_PRICES, percentile){
+    LIST_PRICES.sort((a,b) => a - b);
+    cont index = Math.floor((percentile / 100)* LIST_PRICES.lenght) ;
+    return LIST_PRICES[index];
+}
+
+
+const average = Compute Average(LIST_PRICES);
+const p5 = computePercentile(LIST_PRICES, 5);
+const p25 = computePercentile(LIST_PRICES, 25); 
+
+console.log('Average Price : ', average);
+console.log('P5 Price value : ', p5);
+console.log('P25 Price Value : ', p25);
 
 // 🎯 TODO 12: Very old listed items
 // // 1. Log if we have very old items (true or false)
