@@ -1,3 +1,4 @@
+
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 
@@ -11,7 +12,7 @@ const parse = data => {
 
   return $('div.prods a')
     .map((i, element) => {
-      const price = parseFloat(
+      const price = parseInt(
         $(element)
           .find('span.prodl-prix span')
           .text()
@@ -50,3 +51,7 @@ module.exports.scrape = async url => {
 
   return null;
 };
+
+  
+
+  

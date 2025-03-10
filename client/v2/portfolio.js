@@ -256,3 +256,55 @@ document.getElementById('sort-select').addEventListener('change', function() {
     renderDeals(sortedDeals);
   }
 });
+
+// Fetch Vinted sales for a given Lego set id
+const fetchVintedSales = async (legoSetId) => {
+  try {
+    const response = await fetch(
+      `https://lego-api-blue.vercel.app/sales?id=${legoSetId}`
+    );
+    const body = await response.json();
+
+    if (body.success !== true) {
+      console.error(body);
+      return [];
+    }
+
+    return body.data; // Return the sales data
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
+
+// Render Vinted sales
+const renderVintedSales = (sales) => {
+  const salesSection = document.querySelector('#vinted-sales');
+  salesSection.innerHTML = `<h3>Vinted Sales</h3>`;
+
+  sales.forEach(sale => {
+    const saleElement = document.createElement('div');
+    saleElement.className = 'vinted-sale';
+    saleElement.innerHTML = `
+      <span>Price: ${sale.price}</span>
+      <a href="${sale.link}" target="_blank">View Sale</a>
+    `;
+    salesSection.appendChild(saleElement);
+  });
+};
+
+// Feature 7
+selectLegoSetIds.addEventListener('change', async (event) => {
+  const legoSetId = event.target.value;
+  const sales = await fetchVintedSales(legoSetId);
+  renderVintedSales(sales);
+});
+
+
+// Feature 8 
+const renderTotalSales = (sales) => {
+  const spanNbSales = document.querySelector('#nbSales');
+  spanNbSales.innerHTML = sales.length;
+};
+
+
