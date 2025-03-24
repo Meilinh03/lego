@@ -121,8 +121,24 @@ if (deals.length > 0) {
 //   'community-name-n': [{...}, {...}, ..., {...}],
 // };
 //
-// 2. Log the variable
-// 3. Log the number of deals by community
+const communities = deals.reduce((acc, deal) => {
+  if (!acc[deal.community]) {
+    acc[deal.community] = [];
+  }
+  acc[deal.community].push(deal);
+  return acc;
+}, {});
+
+console.log('Communities:', Object.keys(communities));
+
+Object.entries(communities).forEach(([community, deals]) => {
+  console.log(`Number of deals for ${community}:`, deals.length);
+});
+
+// show the deals list for the communities
+console.log('Deals by community:', communities);
+console.table(communities);
+
 
 // 🎯 TODO 9: Sort by price for each community
 // 1. For each community, sort the deals by discount price, from highest to lowest
@@ -147,8 +163,14 @@ console.log(groupedByCommunity);
 
 // 🎯 TODO 10: Sort by date for each community
 // 1. For each set, sort the deals by date, from old to recent
+const sortedByDateCommunities = Object.entries(communities).map(([community, deals]) => {
+    return {
+        community, // Le nom de la communauté
+        deals: [...deals].sort((a, b) => new Date(a.date) - new Date(b.date)) // Tri des deals par date
+    };
+});
 // 2. Log the sort
-
+console.log(sortedByDateCommunities);
 
 /**
  * 🧥
@@ -441,44 +463,72 @@ const VINTED = [
 // 3. Compute the p25 price value of the listing
 // The p25 value (25th percentile) is the lower value expected to be exceeded in 25% of the vinted items
 
-console.log('TODO11 \n'); 
-const LIST_PRICES = [...new Set(VINTED.map(VINTED => VINTED.price))];
-console.log(LIST_PRICES);
+const prices = VINTED.map(item => parseFloat(item.price));
+prices.sort((a, b) => a - b);
+const total = prices.reduce((acc, price) => acc + price, 0);
+const itemCount = VINTED.length;
+function computePercentile(data, percentile) {
+    const index = (percentile / 100) * (data.length + 1) - 1; // Compute the index (0-based)
 
-function ComputeAverage( LIST_PRICES ) {
-    const sum = (LIST_PRICES.reduce((total,price) => total + price , 0))
-    return sum / LIST_PRICES.length ;
+    if (index % 1 === 0) {
+        return data[index]; // If index is an integer, return the value at that index
+    } else {
+        const lowerIndex = Math.floor(index);
+        const upperIndex = Math.ceil(index);
+        const interpolation = index - lowerIndex;
+        return data[lowerIndex] + interpolation * (data[upperIndex] - data[lowerIndex]);
+    }
 }
+// 1. Compute the average price value of the listing
+const averagePrice = total / itemCount;
+// 2. Compute the p5 price value of the listing
+const p5 = computePercentile(prices, 5);
+// 3. Compute the p25 price value of the listing
+const p25 = computePercentile(prices, 25);
+// The p25 value (25th percentile) is the lower value expected to be exceeded in 25% of the vinted items
 
-
-function computerPercentile(LIST_PRICES, percentile){
-    LIST_PRICES.sort((a,b) => a - b);
-    cont index = Math.floor((percentile / 100)* LIST_PRICES.lenght) ;
-    return LIST_PRICES[index];
-}
-
-
-const average = Compute Average(LIST_PRICES);
-const p5 = computePercentile(LIST_PRICES, 5);
-const p25 = computePercentile(LIST_PRICES, 25); 
-
-console.log('Average Price : ', average);
-console.log('P5 Price value : ', p5);
-console.log('P25 Price Value : ', p25);
+console.log(averagePrice);
+console.log(p5);
+console.log(p25);
 
 // 🎯 TODO 12: Very old listed items
 // // 1. Log if we have very old items (true or false)
-// // A very old item is an item `published` more than 3 weeks ago.
+let trueCount = 0; 
+let falseCount = 0; 
+function checkIfVeryOld(item) {
+    const publishedDate = new Date(item.published);
+    const currentDate = new Date();
+    const threeWeeksAgo = currentDate.setDate(currentDate.getDate() - 21); // 21 days = 3 weeks
+
+    return publishedDate < threeWeeksAgo;
+}
+
+VINTED.forEach(item => {
+    const isVeryOld = checkIfVeryOld(item); 
+    if (isVeryOld) {
+        trueCount++; 
+    } else {
+        falseCount++; 
+    }
+});
+
+// // 1. Log if we have very old items (true or false)
+console.log(`Number of very old items (true): ${trueCount}`);
+console.log(`Number of not very old items (false): ${falseCount}`);
 
 // 🎯 TODO 13: Find a specific item
 // 1. Find the item with the uuid `f2c5377c-84f9-571d-8712-98902dcbb913`
+const itemWithUuid = VINTED.find(item => item.uuid === 'f2c5377c-84f9-571d-8712-98902dcbb913');
+
 // 2. Log the item
+console.log(itemWithUuid); 
 
 // 🎯 TODO 14: Delete a specific item
 // 1. Delete the item with the uuid `f2c5377c-84f9-571d-8712-98902dcbb913`
-// 2. Log the new list of items
+const updatedVINTED = VINTED.filter(item => item !== itemWithUuid);
+console.log(updatedVINTED);
 
-// 🎯 TODO 5: Save a favorite item
+// 🎯 TODO 15: Save a favorite item
 // We declare and assign a variable called `sealedCamera`
 let sealedCamera = {
   link: "https://www.vinted.fr/items/5563396347-lego-43230-omaggio-a-walter-disney-misb",
@@ -495,9 +545,9 @@ let camera = sealedCamera;
 camera.favorite = true;
 
 // 1. Log `sealedCamera` and `camera` variables
+console.log(sealedCamera);
+console.log(camera);
 // 2. What do you notice?
-
-// we make (again) a new assignment again
 sealedCamera = {
   link: "https://www.vinted.fr/items/5563396347-lego-43230-omaggio-a-walter-disney-misb",
   price: "131.95",
@@ -507,9 +557,12 @@ sealedCamera = {
 };
 
 // 3. Update `camera` property with `favorite` to true WITHOUT changing sealedCamera properties
+camera = { ...sealedCamera };
+camera.favorite = true;
+console.log(camera);
+console.log(sealedCamera);
 
-
-// 🎯 TODO 11: Compute the profitability
+// 🎯 TODO 16: Compute the profitability
 // From a specific deal called `deal`
 const deal = {
   'title':  'La caméra Hommage à Walt Disney',
@@ -519,8 +572,19 @@ const deal = {
 }
 
 // 1. Compute the potential highest profitability based on the VINTED items
-// 2. Log the value
+function computeProfitability(item) {
+    return item.retail - item.price;
+}
 
+let highestProfitability = 0;
+VINTED.forEach(item => {
+    const profitability = computeProfitability(deal);
+    if (profitability > highestProfitability) {
+        highestProfitability = profitability;
+    }
+});
+// 2. Log the value
+console.log(highestProfitability);
 
 
 /**
@@ -531,4 +595,7 @@ const deal = {
 
 // 🎯 LAST TODO: Save in localStorage
 // 1. Save MY_FAVORITE_DEALERS in the localStorage
+localStorage.setItem("MY_FAVORITE_DEALERS", JSON.stringify(MY_FAVORITE_DEALERS));
 // 2. log the localStorage
+const storedDealers = localStorage.getItem("MY_FAVORITE_DEALERS");
+console.log("Stored Dealers: ", JSON.parse(storedDealers));
