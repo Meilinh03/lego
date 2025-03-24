@@ -1,19 +1,23 @@
-const { MongoClient } = require('mongodb');
+//const { MongoClient } = require('mongodb');
 
-const MONGODB_URI = 'mongodb+srv://<db_username>:<db_password>@cluster0.3m6ic.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+import { MongoClient } from 'mongodb';
+const dealabs = from './websites/dealabs.js';
+
+
+const MONGODB_URI = 'mongodb+srv://mm:<db_password>@cluster0.3m6ic.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const MONGODB_DB_NAME = 'lego';
+
+const getSiteName = (url) => {
+  if (url.includes('dealabs.com')) return 'dealabs';
+  return null;
+};
 
 // Connect to MongoDB client
 const client = await MongoClient.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = client.db(MONGODB_DB_NAME);
 
 // Insert deals and sales into the database
-const deals = [
-    // Example deal data
-    { name: 'Lego Set 1', price: 50, discount: 30, comments: 100, createdAt: new Date() },
-    { name: 'Lego Set 2', price: 100, discount: 10, comments: 150, createdAt: new Date() },
-    { name: 'Lego Set 3', price: 150, discount: 20, comments: 200, createdAt: new Date() }
-];
+const deals = [];
 
 // Inserting the deals into the 'deals' collection
 const collection = db.collection('deals');
@@ -62,18 +66,16 @@ const findSalesLessThanThreeWeeksOld = async () => {
     console.log('Sales scraped less than 3 weeks ago:', sales);
 };
 
-// Example of how to call the functions
 await findBestDiscountDeals();
 await findMostCommentedDeals();
 await findDealsSortedByPrice();
 await findDealsSortedByDate();
 
-// Example Lego Set ID for finding sales
 const legoSetId = '42156';
 await findSalesByLegoSetId(legoSetId);
 await findSalesLessThanThreeWeeksOld();
 
-// Close the MongoDB connection
+
 await client.close();
 
 

@@ -1,6 +1,5 @@
 
 /* eslint-disable no-console, no-process-exit */
-
 const avenuedelabrique = require('./websites/avenuedelabrique');
 const dealabs = require('./websites/dealabs');
 
