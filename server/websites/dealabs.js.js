@@ -2,7 +2,6 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
-// URL de la recherche Lego sur Dealabs
 const url = 'https://www.dealabs.com/search?q=lego';
 
 async function scrapeLegoDeals() {
@@ -12,40 +11,47 @@ async function scrapeLegoDeals() {
 
     let deals = [];
 
-    // Sélectionner chaque offre Lego
     $('div.js-threadList article > div.js-vue2').each((index, element) => {
+      const threadData = JSON.parse($(element).attr('data-vue2'));
+      const thread = threadData.props.thread;
 
-      const data = JSON.parse($(element).attr('data-vue2'));
-      const title = data.props.thread.title;
-      const price = data.props.thread.price;
-      const retailPrice = data.props.thread.nextBestPrice; // Prix d'origine
-      const link = data.props.thread.link;
-      const temperature = data.props.thread.temperature
-      const image = `https://static-pepper.dealabs.com/threads/raw/${data.props.thread.mainImage.slotId}/${data.props.thread.mainImage.name}/re/300x300/qt/60/${data.props.thread.mainImage.name}.${data.props.thread.mainImage.extension}` ;     
+      const title = thread.title;
+      const price = thread.price;
+      const retailPrice = thread.nextBestPrice;
+      const link = thread.link;
+      const temperature = thread.temperature;
+      const image = `https://static-pepper.dealabs.com/threads/raw/${thread.mainImage.slotId}/${thread.mainImage.name}/re/300x300/qt/60/${thread.mainImage.name}.${thread.mainImage.extension}`;
       
-      // Calcul du discount
       let discount = null;
       if (retailPrice && price) {
         discount = Math.round(((retailPrice - price) / retailPrice) * 100);
       }
-      const comments = data.props.thread.commentCount;
-      const published = new Date(data.props.thread.publishedAt * 1000);
-      const id = data.props.thread.threadId;
       
-      console.log(title);
-      console.log(price);
-      console.log(discount);
-      console.log(link);      
-      console.log(temperature);    
-      console.log(image);
-      console.log(comments);
-      console.log(published);
-      console.log(id);
+      const comments = thread.commentCount;
+      const published = new Date(thread.publishedAt * 1000);
+      const id = thread.threadId;
+      
+      deals.push({
+        id,
+        title,
+        price,
+        retailPrice,
+        discount,
+        link,
+        temperature,
+        image,
+        comments,
+        published
+      });
     });
+
+    fs.writeFileSync('lego_deals.json', JSON.stringify(deals, null, 2));
+    console.log('Données enregistrées dans lego_deals.json');
   } catch (error) {
-    console.error(' Erreur de scraping:', error);
+    console.error('Erreur de scraping:', error);
   }
 }
+
 
 // Lancer le scraping
 scrapeLegoDeals();
