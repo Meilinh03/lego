@@ -1,128 +1,223 @@
-[
-  {
-    "id": 5937163495,
-    "title": "Lego 10338",
-    "timestamp": 1741516274,
-    "published_time": "09/03/2025 11:31:14",
-    "price": 55,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5937163495-lego-10338"
-  },
-  {
-    "id": 5873499421,
-    "title": "Lego Trans Formers Bumblebee",
-    "timestamp": 1740430488,
-    "published_time": "24/02/2025 21:54:48",
-    "price": 69.99,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5873499421-lego-trans-formers-bumblebee"
-  },
-  {
-    "id": 5846495103,
-    "title": "Lego Trans Formers Bumblebee 18+",
-    "timestamp": 1740044935,
-    "published_time": "20/02/2025 10:48:55",
-    "price": 70,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5846495103-lego-trans-formers-bumblebee-18"
-  },
-  {
-    "id": 5844565380,
-    "title": "LEGO Icons 10338 Bumblebee",
-    "timestamp": 1739989036,
-    "published_time": "19/02/2025 19:17:16",
-    "price": 72,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5844565380-lego-icons-10338-bumblebee"
-  },
-  {
-    "id": 5878921341,
-    "title": "lego 10338",
-    "timestamp": 1740521716,
-    "published_time": "25/02/2025 23:15:16",
-    "price": 90,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5878921341-lego-10338"
-  },
-  {
-    "id": 5896518233,
-    "title": "Lego ICONS 10338 / Transformers Bumblebee, Nuevo.",
-    "timestamp": 1740841191,
-    "published_time": "01/03/2025 15:59:51",
-    "price": 69.95,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5896518233-lego-icons-10338-transformers-bumblebee-nuevo"
-  },
-  {
-    "id": 5517808820,
-    "title": "Lego 10338",
-    "timestamp": 1734008748,
-    "published_time": "12/12/2024 14:05:48",
-    "price": 73,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5517808820-lego-10338"
-  },
-  {
-    "id": 5843702071,
-    "title": "Lego 10338",
-    "timestamp": 1739981042,
-    "published_time": "19/02/2025 17:04:02",
-    "price": 85,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5843702071-lego-10338"
-  },
-  {
-    "id": 5656738415,
-    "title": "Lego Icons 10338 Bumblebee",
-    "timestamp": 1736945050,
-    "published_time": "15/01/2025 13:44:10",
-    "price": 75,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5656738415-lego-icons-10338-bumblebee"
-  },
-  {
-    "id": 5034927248,
-    "title": "Lego Icons 10338 Transformers Bumblebee",
-    "timestamp": 1726224298,
-    "published_time": "13/09/2024 12:44:58",
-    "price": 85,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5034927248-lego-icons-10338-transformers-bumblebee"
-  },
-  {
-    "id": 5619909053,
-    "title": "Lego Bumblebee Transformers",
-    "timestamp": 1736337567,
-    "published_time": "08/01/2025 12:59:27",
-    "price": 90,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5619909053-lego-bumblebee-transformers"
-  },
-  {
-    "id": 5548968274,
-    "title": "Lego transformers 10338",
-    "timestamp": 1734771350,
-    "published_time": "21/12/2024 09:55:50",
-    "price": 95,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5548968274-lego-transformers-10338"
-  },
-  {
-    "id": 5749269683,
-    "title": "Lego transformers Bumblebee 10338 neuf scellé",
-    "timestamp": 1738486291,
-    "published_time": "02/02/2025 09:51:31",
-    "price": 82,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5749269683-lego-transformers-bumblebee-10338-neuf-scelle"
-  },
-  {
-    "id": 5668949238,
-    "title": "LEGO 10338 Transformers Bumblebee New",
-    "timestamp": 1737156249,
-    "published_time": "18/01/2025 00:24:09",
-    "price": 75,
-    "brand": "LEGO",
-    "url": "https://www.vinted.fr/items/5668949238-lego-10338-transformers-bumblebee-new"
-  }
-]
+{
+  "10363": [
+    {
+      "link": "https://www.vinted.fr/items/4979498095-pull-court",
+      "price": "4.9",
+      "title": "Pull court",
+      "published": "Tue, 03 Sep 2024 03:46:45 GMT",
+      "uuid": "037f07de-fed6-550e-b827-b2df42f58681"
+    },
+    {
+      "link": "https://www.vinted.fr/items/6013841662-la-machine-volante-de-leonard-de-vinci-ref-10363-lego-icons",
+      "price": "41.65",
+      "title": "La machine volante de Léonard de Vinci réf 10363 lego icons",
+      "published": "Sat, 22 Mar 2025 16:46:42 GMT",
+      "uuid": "d6b38845-ffc7-53f7-9527-aa8e1bdf827e"
+    },
+    {
+      "link": "https://www.vinted.fr/items/6023868910-flying-machine-10363-lego",
+      "price": "42.7",
+      "title": "Flying machine 10363 LEGO",
+      "published": "Sun, 23 Mar 2025 23:03:41 GMT",
+      "uuid": "f44fb28b-99a8-5636-ba9c-b04a912713cd"
+    },
+    {
+      "link": "https://www.vinted.fr/items/6015540159-lego-icons-10363-neuf",
+      "price": "42.7",
+      "title": "Lego Icons 10363 neuf",
+      "published": "Sat, 22 Mar 2025 22:10:52 GMT",
+      "uuid": "f2942cb2-81fa-57ce-8f36-6a3ec29c3a5c"
+    },
+    {
+      "link": "https://www.vinted.fr/items/6008148545-lego-10363",
+      "price": "47.95",
+      "title": "Lego 10363",
+      "published": "Fri, 21 Mar 2025 17:26:23 GMT",
+      "uuid": "1c4374ef-f278-5c5c-9c55-6ec7506f4437"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5946566200-lego-ideas-10363",
+      "price": "46.9",
+      "title": "Lego ideas 10363",
+      "published": "Mon, 10 Mar 2025 16:48:48 GMT",
+      "uuid": "bb201c4d-0a52-5ee1-b6c1-dc5e7f8d88dd"
+    },
+    {
+      "link": "https://www.vinted.fr/items/6004557738-lego-10363-flying-machine-di-leonardo-da-vinci",
+      "price": "49.0",
+      "title": "Lego 10363 flying machine di Leonardo Da Vinci",
+      "published": "Thu, 20 Mar 2025 22:01:34 GMT",
+      "uuid": "3f9c9b99-26df-5b1d-98ce-0d942cf79354"
+    },
+    {
+      "link": "https://www.vinted.fr/items/6006813071-set-lego-10363",
+      "price": "45.85",
+      "title": "Set lego 10363",
+      "published": "Fri, 21 Mar 2025 13:39:06 GMT",
+      "uuid": "3077b457-5763-5ec2-b79d-ba47334795ca"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5896007656-lego-flying-machine-10363-neuf",
+      "price": "46.9",
+      "title": "Lego Flying Machine 10363 neuf",
+      "published": "Sat, 01 Mar 2025 14:05:56 GMT",
+      "uuid": "3d17ce4c-61d6-5ab7-b469-8cce4d96e4bb"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5959065065-lego-10363",
+      "price": "53.2",
+      "title": "Lego 10363",
+      "published": "Wed, 12 Mar 2025 21:34:14 GMT",
+      "uuid": "d915f9d6-6a41-5db7-b865-26784a3d69cf"
+    },
+    {
+      "link": "https://www.vinted.fr/items/4907612745-t-shirt-hollister-donna-cotone-ts10363",
+      "price": "11.2",
+      "title": "T shirt Hollister, donna, cotone, TS.10363",
+      "published": "Mon, 19 Aug 2024 12:45:23 GMT",
+      "uuid": "1ba11f12-be53-5c35-a764-f30c2aff5726"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5954325907-lego-da-vinci",
+      "price": "53.2",
+      "title": "Lego Da Vinci",
+      "published": "Wed, 12 Mar 2025 08:51:37 GMT",
+      "uuid": "50f0fa8f-6cdc-540f-b792-b55ccf57da25"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5813256590-lego-icons-10363-leonardo-da-vinci-s-nuevo",
+      "price": "47.9",
+      "title": "Lego ICONS 10363 / Leonardo Da Vinci s , Nuevo",
+      "published": "Fri, 14 Feb 2025 00:11:30 GMT",
+      "uuid": "4bddd055-e7c5-58cf-8485-d616d3c799b3"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5804910155-lego-10363-flying-machine",
+      "price": "51.1",
+      "title": "Lego 10363 flying machine",
+      "published": "Wed, 12 Feb 2025 11:32:31 GMT",
+      "uuid": "c95ff771-d0a7-5535-8407-327cdb51cc5d"
+    },
+    {
+      "link": "https://www.vinted.fr/items/881036156-kleiner-pferdeatlas-die-beliebtesten-pferderassen-der-welt",
+      "price": "3.85",
+      "title": "Kleiner Pferdeatlas: Die beliebtesten Pferderassen der Welt ",
+      "published": "Tue, 02 Feb 2021 15:28:59 GMT",
+      "uuid": "89e76353-4380-5beb-bfbd-f58e16cece57"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5956003176-lego-icons-10363-la-machine-volante-de-leonard-de-vinci",
+      "price": "63.7",
+      "title": "Lego icons 10363 la machine volante de Léonard de Vinci",
+      "published": "Wed, 12 Mar 2025 13:24:17 GMT",
+      "uuid": "fd7eaedd-f4a3-5151-acb3-a693f0239a17"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5807330846-lego-10363-la-machine-volante-de-leonard-de-vinci",
+      "price": "53.2",
+      "title": "Lego 10363 La machine volante de Leonard de Vinci",
+      "published": "Wed, 12 Feb 2025 17:57:54 GMT",
+      "uuid": "d6c51837-7273-5218-b326-cb09480676fe"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5776113503-10363-lego-icons-de-vliegmachine-van-leonardo-da-vinci",
+      "price": "53.2",
+      "title": "10363 LEGO Icons De vliegmachine van Leonardo da Vinci",
+      "published": "Fri, 07 Feb 2025 08:59:22 GMT",
+      "uuid": "d30eb409-fd52-5cda-b142-402326915d01"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5906935016-lego-icons-10363-leonardo-da-vincis-flying-machine-nuovo",
+      "price": "51.1",
+      "title": "LEGO Icons 10363 Leonardo da Vinci’s Flying Machine NUOVO",
+      "published": "Mon, 03 Mar 2025 11:09:15 GMT",
+      "uuid": "cc9756f0-7788-5975-9c57-ab87f002face"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5859050043-lego-icons-10363-leonardo-da-vincis-flying-machine",
+      "price": "50.05",
+      "title": "LEGO Icons 10363 “Leonardo da Vinci’s flying machine”",
+      "published": "Sat, 22 Feb 2025 15:19:04 GMT",
+      "uuid": "e924caba-8ad5-5721-9387-a79214b28fb7"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5734465675-lego-icons-10363-la-machine-volante-de-leonard-de-vinci",
+      "price": "63.7",
+      "title": "Lego icons 10363 la machine volante de Léonard de Vinci",
+      "published": "Thu, 30 Jan 2025 08:30:21 GMT",
+      "uuid": "83b5ce06-95cb-552d-8099-f2c0143c8f0f"
+    },
+    {
+      "link": "https://www.vinted.fr/items/2971780348-saco-carro-rosa-mayoral",
+      "price": "32.2",
+      "title": "Saco carro Rosa Mayoral ",
+      "published": "Tue, 02 May 2023 12:04:31 GMT",
+      "uuid": "41cefcd8-2c68-5722-ad6c-644b89321ab8"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5772198500-10363-lego-icons-de-vliegmachine-van-leonardo-da-vinci",
+      "price": "53.2",
+      "title": "10363 LEGO Icons De vliegmachine van Leonardo da Vinci",
+      "published": "Thu, 06 Feb 2025 11:31:27 GMT",
+      "uuid": "06d9270b-8320-5306-a134-5500a7f6e6f6"
+    },
+    {
+      "link": "https://www.vinted.fr/items/3062509398-disco-various-artists-da-hollywood-a-cinecitta-italy-lp-45-ep-jazz-soundtrack-latin-compilation",
+      "price": "4.9",
+      "title": "disco various artists da hollywood a cinecitta italy lp 45 ep jazz soundtrack latin compilation",
+      "published": "Thu, 25 May 2023 19:23:31 GMT",
+      "uuid": "9d5f9cd4-e546-5289-a396-3122b75827d9"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5881956479-boite-lego-icons-ref-10363-la-machine-volante-de-leonard-de-vinci",
+      "price": "62.65",
+      "title": "Boîte lego icons réf 10363 la machine volante de Léonard de Vinci",
+      "published": "Wed, 26 Feb 2025 15:34:32 GMT",
+      "uuid": "fc9c8ef5-a073-5d0f-b2ec-3a8b0c397a29"
+    }
+  ],
+  "21034": [
+    {
+      "link": "https://www.vinted.fr/items/6024061239-lego-london-21034-architecture",
+      "price": "17.5",
+      "title": "Lego London 21034 architecture",
+      "published": "Mon, 24 Mar 2025 06:19:43 GMT",
+      "uuid": "a544d721-ca1a-59c4-894e-f3fc8b0c9a2d"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5779454848-notice-lego-21034",
+      "price": "5.95",
+      "title": "Notice lego 21034",
+      "published": "Fri, 07 Feb 2025 19:21:28 GMT",
+      "uuid": "52e5d463-ce89-556c-8a5e-bba883c228dd"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5952475389-lego-21034",
+      "price": "30.1",
+      "title": "LEGO 21034",
+      "published": "Tue, 11 Mar 2025 18:14:36 GMT",
+      "uuid": "023a8ac7-0802-5968-b2ef-94a3a97bc82d"
+    },
+    {
+      "link": "https://www.vinted.fr/items/6010466292-neuf-lego-architecture-london",
+      "price": "32.2",
+      "title": "NEUF lego Architecture London",
+      "published": "Sat, 22 Mar 2025 09:58:59 GMT",
+      "uuid": "02dcb916-e7cf-5f8f-8a23-2f01b8007f76"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5942490900-lego-architecture-21034-london",
+      "price": "16.45",
+      "title": "Lego Architecture 21034 London",
+      "published": "Sun, 09 Mar 2025 20:32:11 GMT",
+      "uuid": "8860f178-639d-5c53-856d-9ffc5ff52e31"
+    },
+    {
+      "link": "https://www.vinted.fr/items/5798989002-21034-lego-architecture-skylines-london",
+      "price": "16.45",
+      "title": "21034 LEGO Architecture Skylines London",
+      "published": "Tue, 11 Feb 2025 08:48:59 GMT",
+      "uuid": "53d3a193-2ec5-5cbf-935f-62b2cc889b69"
+    }
+  ]
+}

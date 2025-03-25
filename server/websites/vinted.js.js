@@ -9,7 +9,7 @@ const scrapeWithCookies = async (searchText) => {
     console.log('with cookies');
     const response = await fetch("https://www.vinted.fr/api/v2/catalog/items?page=1&per_page=96&time=1741632688&search_text=42182&catalog_ids=&size_ids=&brand_ids=&status_ids=&color_ids=&material_ids=", {
     "headers": {
-        "accept": "application/json, text/plain, */*",
+        "accept": "application/json, text/plain, /",
         "accept-language": "fr",
         "priority": "u=1, i",
         "sec-ch-ua": "\"Not(A:Brand\";v=\"99\", \"Google Chrome\";v=\"133\", \"Chromium\";v=\"133\"",
@@ -56,7 +56,7 @@ const scrapeWithCookies = async (searchText) => {
         console.log('Aucun article trouvé.');
       }
     } else {
-      console.error(`Erreur HTTP : ${response.status}`);
+    console.error(`Erreur HTTP : ${response.status}`);
     }
   } catch (error) {
     console.error('Erreur lors du scraping :', error);

@@ -1,13 +1,13 @@
 const fs = require('fs');
 const path = require('path');
-const { connectDB } = require('./database');
+const { connectDB } = require('./Mongo.js');
 
 async function insertSales() {
     const db = await connectDB();
     const collection = db.collection('sales');
 
     // Charger le fichier JSON
-    const filePath = path.join(__dirname, './server/vintedSales.json');
+    const filePath = path.join(__dirname, './server/websites/vinted_sales.json');
     const rawData = fs.readFileSync(filePath, 'utf8');
     const salesData = JSON.parse(rawData);
 
